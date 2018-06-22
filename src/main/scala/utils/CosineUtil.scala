@@ -79,11 +79,11 @@ object CosineUtil {
           if (charIndex != -1) {
             var fq = algorithmMap.get(charIndex)
             if (fq != null && fq.length == 2) {
-              fq(0) = fq(0) + 1; //已有该字符，加1
+              fq(1) = fq(1) + 1; //已有该字符，加1
             } else {
               fq = new Array[Int](2)
-              fq(0) = 1
-              fq(1) = 0
+              fq(0) = 0
+              fq(1) = 1
               algorithmMap.put(charIndex, fq) //新增字符入map
             }
           }
@@ -97,7 +97,7 @@ object CosineUtil {
       while (iterator.hasNext) {
         val c = algorithmMap.get(iterator.next())
         denominator += c(0) * c(1)
-        sqdoc1 += c(0) * c(1)
+        sqdoc1 += c(0) * c(0)
         sqdoc2 += c(1) * c(1)
       }
 

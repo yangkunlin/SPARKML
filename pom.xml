@@ -93,6 +93,13 @@
             <version>2.3</version>
         </dependency>
 
+        <!-- DataBase数据库连接 mysql包-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+
         <!-- ikanalyzer分词器 -->
         <dependency>
             <groupId>com.janeluo</groupId>
